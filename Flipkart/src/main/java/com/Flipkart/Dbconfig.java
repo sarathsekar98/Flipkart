@@ -128,14 +128,14 @@ public class Dbconfig {
 		return transactionManager;
 	}
 	
-//	@Bean
-//	public HibernateTemplate template()
-//	{
-//		HibernateTemplate template = new HibernateTemplate();
-//		
-//		template.setSessionFactory(sessionFactory());
-//		
-//		return template;
-//	}
+	@Bean
+	public HibernateTemplate template()
+	{
+		HibernateTemplate template = new HibernateTemplate();
+		
+		template.setSessionFactory(sessionFactory().getObject());
+		
+		return template;
+	}
 	
 }
