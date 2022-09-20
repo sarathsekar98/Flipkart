@@ -1,5 +1,7 @@
 package com.Flipkart.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -18,6 +20,12 @@ public class Homeservice {
 	public Signup signup(Signup sign)throws Exception{
 		// TODO Auto-generated method stub
 		return homeRepository.signup(sign);
+	}
+
+	@Transactional
+	public List<Signup> getuser() {
+		// TODO Auto-generated method stub
+		return homeRepository.getuser();
 	}
 
 	
